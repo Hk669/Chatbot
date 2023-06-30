@@ -12,7 +12,11 @@
         "patterns" : ["techstack","software used","build on"],
         "responses" : ["techstack used is : js,openai,python,botpress"]
     },
-
+    {
+        "tag" : "support",
+        "patterns" : ["support","service supprt","support provided?"],
+        "responses" : ["PhoneNumber : 1234567890","EmailAddress:12334@gmail.com","Here is the contact : 1234567890 , 12345@gmail.com"]
+    },
 
     {"tag":"goodbye",
     "patterns":["bye", "goodbye", "good bye", "good bye"],
