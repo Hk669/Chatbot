@@ -2,6 +2,17 @@
     {"tag": "greetings",
     "patterns": ["hi", "hello", "hey", "greetings", "hey there", "how are you", "how are you doing", "how are you doing?","good day"],
     "responses":["Hello,I'm HK will be assisting you through the entire process!","Hey! I'm HK","What can i do for you?"]},
+    {
+        "tag": "contact",
+        "patterns" : ["contact","phone number","number","phone","reach"],
+        "responses" : ["PhoneNumber : 1234567890","EmailAddress:12334@gmail.com","Here is the contact : 1234567890 , 12345@gmail.com"]
+    },
+    {
+        "tag" : "techstack",
+        "patterns" : ["techstack","software used","build on"],
+        "responses" : ["techstack used is : js,openai,python,botpress"]
+    },
+
 
     {"tag":"goodbye",
     "patterns":["bye", "goodbye", "good bye", "good bye"],
