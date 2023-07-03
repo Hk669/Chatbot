@@ -2,21 +2,18 @@
     {"tag": "greetings",
     "patterns": ["hi", "hello", "hey", "greetings", "hey there", "how are you", "how are you doing", "how are you doing?","good day"],
     "responses":["Hello,I'm HK will be assisting you through the entire process!","Hey! I'm HK","What can i do for you?"]},
-    {
-        "tag": "contact",
-        "patterns" : ["contact","phone number","number","phone","reach"],
-        "responses" : ["PhoneNumber : 1234567890","EmailAddress:12334@gmail.com","Here is the contact : 1234567890 , 12345@gmail.com"]
-    },
-    {
-        "tag" : "techstack",
-        "patterns" : ["techstack","software used","build on"],
-        "responses" : ["techstack used is : js,openai,python,botpress"]
-    },
-    {
-        "tag" : "support",
-        "patterns" : ["support","service supprt","support provided?"],
-        "responses" : ["PhoneNumber : 1234567890","EmailAddress:12334@gmail.com","Here is the contact : 1234567890 , 12345@gmail.com"]
-    },
+    
+    {"tag": "contact",
+    "patterns" : ["contact","phone number","number","phone","reach"],
+    "responses" : ["PhoneNumber : 1234567890","EmailAddress:12334@gmail.com","Here is the contact : 1234567890 , 12345@gmail.com"]},
+    
+    {"tag" : "techstack",
+    "patterns" : ["techstack","software used","build on"],
+    "responses" : ["techstack used is : js,openai,python,botpress"]},
+    
+    {"tag" : "support",
+    "patterns" : ["support","service supprt","support provided?"],
+    "responses" : ["PhoneNumber : 1234567890","EmailAddress:12334@gmail.com","Here is the contact : 1234567890 , 12345@gmail.com"]},
 
     {"tag":"goodbye",
     "patterns":["bye", "goodbye", "good bye", "good bye"],
@@ -28,5 +25,9 @@
 
     {"tag":"pricing",
     "patterns":["pricing", "prices of the services","what are the services price?","services price"],
-    "responses":["Here are some prices of services you can use : AI services\nChatbot : 2500$\nHRMS : 3000$\nStableDiffusion : 5000$"]}
+    "responses":["Here are some prices of services you can use : AI services\nChatbot : 2500$\nHRMS : 3000$\nStableDiffusion : 5000$"]},
+    
+    {"tag":"community",
+    "patterns":["community", "is there any community","what are the community?","community link"],
+    "responses":["Here are is the community: AdVantage Digital Community : (link)"]}
 ]}
