@@ -1,33 +1,150 @@
 {"intents": [
-    {"tag": "greetings",
-    "patterns": ["hi", "hello", "hey", "greetings", "hey there", "how are you", "how are you doing", "how are you doing?","good day"],
-    "responses":["Hello,I'm HK will be assisting you through the entire process!","Hey! I'm HK","What can i do for you?"]},
-    
-    {"tag": "contact",
-    "patterns" : ["contact","phone number","number","phone","reach"],
-    "responses" : ["PhoneNumber : 1234567890","EmailAddress:12334@gmail.com","Here is the contact : 1234567890 , 12345@gmail.com"]},
-    
-    {"tag" : "techstack",
-    "patterns" : ["techstack","software used","build on"],
-    "responses" : ["techstack used is : js,openai,python,botpress"]},
-    
-    {"tag" : "support",
-    "patterns" : ["support","service supprt","support provided?"],
-    "responses" : ["PhoneNumber : 1234567890","EmailAddress:12334@gmail.com","Here is the contact : 1234567890 , 12345@gmail.com"]},
+    {
+        "tag": "greetings",
+        "patterns": [
+            "hi",
+            "hello",
+            "hey",
+            "greetings",
+            "hey there",
+            "how are you",
+            "how are you doing?",
+            "good day"
+        ],
 
-    {"tag":"goodbye",
-    "patterns":["bye", "goodbye", "good bye", "good bye"],
-    "responses":["Goodbye!","See you later!"]},
-
-    {"tag":"services",
-    "patterns":["services", "service","what are the services?","services provided"],
-    "responses":["Here are some services you can use : AI services\nChatbot\nHRMS\nStableDiffusion"]},
-
-    {"tag":"pricing",
-    "patterns":["pricing", "prices of the services","what are the services price?","services price"],
-    "responses":["Here are some prices of services you can use : AI services\nChatbot : 2500$\nHRMS : 3000$\nStableDiffusion : 5000$"]},
+        "responses":[
+            "Hello,I'm HK will be assisting you through the entire process!",
+            "Hey! I'm HK","What can i do for you?"
+        ]
+    },
     
-    {"tag":"community",
-    "patterns":["community", "is there any community","what are the community?","community link"],
-    "responses":["Here are is the community: AdVantage Digital Community : (link)"]}
+    {
+        "tag": "contact",
+        "patterns" : [
+            "contact",
+            "phone number",
+            "number",
+            "phone",
+            "reach"
+        ],
+        
+        "responses" : [
+            "PhoneNumber : 1234567890",
+            "EmailAddress:12334@gmail.com",
+            "Here is the contact : 1234567890 , 12345@gmail.com"
+            ]
+    },
+    
+    {
+        "tag" : "techstack",
+        "patterns" : [
+            "techstack",
+            "software used",
+            "build on"
+        ],
+        
+        "responses" : [
+            "techstack used is : js,openai,python,botpress"
+        ]
+    },
+    
+    {
+        "tag" : "support",
+        "patterns" : [
+            "support",
+            "service supprt",
+            "support provided?"
+        ],
+        
+        "responses" : [
+            "PhoneNumber : 1234567890",
+            "EmailAddress:12334@gmail.com",
+            "Here is the contact : 1234567890 , 12345@gmail.com"
+        ]
+    },
+
+    {
+        "tag":"goodbye",
+        "patterns":[
+            "bye",
+            "goodbye",
+            "good bye",
+            "good bye"
+        ],
+        
+        "responses":[
+            "Goodbye!",
+            "See you later!"
+        ]
+    },
+
+    {
+        "tag":"services",
+        "patterns":[
+            "services",
+            "service",
+            "what are the services?",
+            "services provided"
+        ],
+
+        "responses":[
+            "Here are some services you can use : \nAI services\nChatbot\nHRMS\nStableDiffusion"
+        ]
+    },
+
+    {
+        "tag":"pricing",
+        "patterns":[
+            "pricing",
+            "prices of the services",
+            "what are the services price?",
+            "services price"
+        ],
+        
+        "responses":[
+            "Here are some prices of services you can use : \nAI services\nChatbot : 2500$\nHRMS : 3000$\nStableDiffusion : 5000$"
+        ]
+    },
+    
+    {
+        "tag":"community",
+        "patterns":[
+            "community",
+            "is there any community",
+            "what are the community?",
+            "community link"
+        ],
+
+        "responses":[
+            "Here are is the community: AdVantage Digital Community : (link)"
+        ]
+    },
+
+    {
+        "tag":"hiring",
+        "patterns":[
+            "hiring", "are you hiring?",
+            "hiring process",
+            "is their any position vacant in your company?",
+            "job oppurtunities"
+        ],
+
+        "responses":[
+            "For hiring : (link)/n Phone Number : 4282498124"
+        ]
+    },
+    
+    {
+        "tag":"career",
+        "patterns":[
+            "career",
+            "careers",
+            "career oppurtunities",
+            "is there any career oppurtunities"
+        ],
+
+        "responses":[
+            "For the oppurtunities : (link)/n Phone Number : 4282498124"
+        ]
+    }
 ]}
