@@ -9,7 +9,6 @@ from nltk.stem import WordNetLemmatizer
 import tensorflow as tf
 from tensorflow.keras.models import load_model
 
-#from flask import Flask, request, jsonify
 
 lemmatizer = WordNetLemmatizer()
 intents = json.loads(open("intents.json").read())
@@ -56,42 +55,23 @@ def getResponse(intents_list, intents_json):
         result = 'Sorry, I couldnt understand'
     return result
 
-print("Bot started running!")
 
-from fastapi import FastAPI, Request
+from fastapi import FastAPI, Body
 from pydantic import BaseModel
 
 app = FastAPI()
 
 class Message(BaseModel):
-    message : str
+    message: str
 
-@app.route('/chatbot')
-async def chatbot(request: Request):
-    data = await request.json()
-    message = data['message']
-    ints = predict_class(message)
+@app.post('/chatbot')
+async def chatbot(message: Message = Body(..., description="The message for the chatbot")):
+    ints = predict_class(message.message)
     res = getResponse(ints, intents)
     return {'response': res}
 
 if __name__ == "__main__":
     import uvicorn
-    print("How can i help you")
-    uvicorn.run(app, host='127.0.0.1',port = 5000)
+    print("How can I help you?")
+    uvicorn.run(app, host='127.0.0.1', port=5000)
 
-
-
-#API function
-'''app = Flask(__name__)
-
-@app.route('/chatbot', methods=['GET','POST'])
-def chat():
-    data = request.get_json()
-    message = data['message']
-    ints = predict_class(message)
-    res = getResponse(ints, intents)
-    return jsonify({'response': res})
-
-if __name__ == '__main__':
-    print("Bot started running!")
-    app.run(debug=True)'''
