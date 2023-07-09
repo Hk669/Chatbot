@@ -36,7 +36,7 @@ def bag_of_words(sentence):
     for s in sentence_words:
         for i,w in enumerate(words):
             if w == s:
-                # this replaces 1 with 0 if w is present in the words, else no changes i.e, 0
+                # this replaces 0 with 1 if w is present in the words, else no changes i.e, 0
                 bag[i] = 1
     return np.array(bag)
 
