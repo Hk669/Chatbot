@@ -9,7 +9,7 @@ from nltk.stem import WordNetLemmatizer
 import tensorflow as tf
 from tensorflow.keras.models import load_model
 
-from flask import Flask, request, jsonify
+#from flask import Flask, request, jsonify
 
 lemmatizer = WordNetLemmatizer()
 intents = json.loads(open("intents.json").read())
@@ -52,14 +52,39 @@ def getResponse(intents_list, intents_json):
         if i['tag'] == tag:
             result = random.choice(i['responses'])
             break
+    else:
+        result = 'Sorry, I couldnt understand'
     return result
 
 print("Bot started running!")
 
-#API function
-app = Flask(__name__)
+from fastapi import FastAPI, Request
+from pydantic import BaseModel
 
-@app.route('/chatbot', methods=['POST'])
+app = FastAPI()
+
+class Message(BaseModel):
+    message : str
+
+@app.route('/chatbot')
+async def chatbot(request: Request):
+    data = await request.json()
+    message = data['message']
+    ints = predict_class(message)
+    res = getResponse(ints, intents)
+    return {'response': res}
+
+if __name__ == "__main__":
+    import uvicorn
+    print("How can i help you")
+    uvicorn.run(app, host='127.0.0.1',port = 5000)
+
+
+
+#API function
+'''app = Flask(__name__)
+
+@app.route('/chatbot', methods=['GET','POST'])
 def chat():
     data = request.get_json()
     message = data['message']
@@ -69,4 +94,4 @@ def chat():
 
 if __name__ == '__main__':
     print("Bot started running!")
-    app.run()
+    app.run(debug=True)'''
