@@ -9,6 +9,8 @@ from nltk.stem import WordNetLemmatizer
 import tensorflow as tf
 from tensorflow.keras.models import load_model
 
+from flask import Flask, request, jsonify
+
 lemmatizer = WordNetLemmatizer()
 intents = json.loads(open("intents.json").read())
 
@@ -54,8 +56,17 @@ def getResponse(intents_list, intents_json):
 
 print("Bot started running!")
 
-while True:
-    message = input("User: ")
+#API function using Flask
+app = Flask(__name__)
+
+@app.route('/chatbot', methods=['POST'])
+def chat():
+    data = request.get_json()
+    message = data['message']
     ints = predict_class(message)
-    res = getResponse(ints,intents)
-    print("Bot: " + res)
+    res = getResponse(ints, intents)
+    return jsonify({'response': res})
+
+if __name__ == '__main__':
+    print("Bot started running!")
+    app.run()
