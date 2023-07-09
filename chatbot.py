@@ -56,7 +56,7 @@ def getResponse(intents_list, intents_json):
 
 print("Bot started running!")
 
-#API function using Flask
+#API function
 app = Flask(__name__)
 
 @app.route('/chatbot', methods=['POST'])
