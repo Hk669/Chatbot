@@ -95,3 +95,25 @@ if __name__ == "__main__":
     print("How can I help you?")
     uvicorn.run(app, host='127.0.0.1', port=5000)
 
+# from flask import Flask,request
+# import jsonify
+
+# app = Flask(__name__)
+
+# @app.get("/")
+# def index():
+#     return 
+
+
+
+# @app.post('/chatbot')
+# def chatbot():
+#     text = request.get_json().get("message")
+#     ints = predict_class(text)
+#     res = getResponse(ints, intents)
+#     mess = {'response': res}
+#     return jsonify(mess)
+
+
+# if __name__ == '__main__':
+#     app.run(debug=True)
